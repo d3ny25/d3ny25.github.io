@@ -1,0 +1,52 @@
+---
+import SkillCard from "../atoms/SkillCard.astro";
+
+const skills = [
+  {
+    name: "HTML",
+    description: "Estructura y semántica para sitios web modernos.",
+    icon: "🌐",
+  },
+  {
+    name: "CSS / Tailwind",
+    description: "Estilos modernos, responsive y con diseño limpio.",
+    icon: "🎨",
+  },
+  {
+    name: "JavaScript",
+    description: "Lenguaje esencial para interacción dinámica en la web.",
+    icon: "⚡",
+  },
+  {
+    name: "Astro.js",
+    description: "Framework rápido y optimizado para sitios estáticos.",
+    icon: "🚀",
+  },
+  {
+    name: "React",
+    description: "Creación de interfaces reutilizables y dinámicas.",
+    icon: "⚛️",
+  },
+  {
+    name: "Git / GitHub",
+    description: "Control de versiones y colaboración en proyectos.",
+    icon: "💻",
+  },
+];
+---
+
+<section class="text-center py-16">
+  <h2 class="text-4xl font-bold text-indigo-400 mb-6">Habilidades</h2>
+  <p class="text-gray-400 max-w-2xl mx-auto mb-12">
+    Aquí muestro las habilidades que me definen tanto en el mundo tecnológico como en el creativo.
+  </p>
+
+  <div class="mb-20">
+    <h3 class="text-2xl font-semibold text-indigo-300 mb-8">Habilidades Técnicas</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      {skills.map((skill) => (
+        <SkillCard {...skill} />
+      ))}
+    </div>
+  </div>
+</section>

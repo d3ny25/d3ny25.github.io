@@ -1,0 +1,48 @@
+---
+import ProjectCard from "../atoms/ProjectCard.astro";
+const projects = [
+  {
+    title: "microPay",
+    description: "Aplicación web que automatiza y centraliza la distribución de pagos",
+    github: "https://github.com/d3ny25/microPay",
+    tech: [
+      { name: "Node.js", icon: "/assets/icons/html.svg" },
+      { name: "API Open Payments", icon: "/assets/icons/css.svg" },
+      { name: "MySQL", icon: "/assets/icons/javascript.svg" },
+    ],
+    image: "/assets/projects/music-landing.jpg",
+  },
+  {
+    title: "Sistema de Ventas",
+    description: "App para gestionar productos, ventas y comisiones.",
+    github: "https://github.com/d3ny25/sistema-ventas",
+    tech: [
+      { name: "React", icon: "/assets/icons/react.svg" },
+      { name: "Node.js", icon: "/assets/icons/nodejs.svg" },
+      { name: "MongoDB", icon: "/assets/icons/mongodb.svg" },
+    ],
+    image: "/assets/projects/sales-system.jpg",
+  },
+  {
+    title: "Blog Personal con Astro.js",
+    description: "Un blog moderno usando componentes atómicos, Tailwind y Astro.",
+    github: "https://github.com/d3ny25/blog-astro",
+    tech: [
+      { name: "Astro", icon: "/assets/icons/astro.svg" },
+      { name: "Tailwind", icon: "/assets/icons/tailwind.svg" },
+      { name: "TypeScript", icon: "/assets/icons/typescript.svg" },
+    ],
+    image: "/assets/projects/blog.png",
+  },
+];
+---
+
+<section class="max-w-6xl mx-auto px-6 py-16">
+  <h2 class="text-4xl font-bold mb-10 text-center text-gray-800">Proyectos</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    {projects.map((project) => (
+      <ProjectCard {...project} />
+    ))}
+  </div>
+</section>

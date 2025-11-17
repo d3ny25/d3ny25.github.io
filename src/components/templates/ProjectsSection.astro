@@ -6,39 +6,37 @@ const projects = [
     description: "Aplicación web que automatiza y centraliza la distribución de pagos",
     github: "https://github.com/d3ny25/microPay",
     tech: [
-      { name: "Node.js", icon: "/assets/icons/html.svg" },
-      { name: "API Open Payments", icon: "/assets/icons/css.svg" },
-      { name: "MySQL", icon: "/assets/icons/javascript.svg" },
+      { name: "Node.js", icon: "src/assets/icons/nodejs.png" },
+      { name: "API Open Payments", icon: "src/assets/icons/openpay.svg" },
+      { name: "MySQL", icon: "src/assets/icons/base-de-datos.png" },
     ],
-    image: "/assets/projects/music-landing.jpg",
+    image: "src/assets/projects/micropay.png",
   },
   {
-    title: "Sistema de Ventas",
-    description: "App para gestionar productos, ventas y comisiones.",
-    github: "https://github.com/d3ny25/sistema-ventas",
+    title: "Angry Birds",
+    description: "Recreación del videojuego Angry Birds en Godot Engine",
+    github: "https://github.com/d3ny25/angry_birds",
     tech: [
-      { name: "React", icon: "/assets/icons/react.svg" },
-      { name: "Node.js", icon: "/assets/icons/nodejs.svg" },
-      { name: "MongoDB", icon: "/assets/icons/mongodb.svg" },
+      { name: "Godot Engine", icon: "src/assets/icons/godot.png" },
     ],
-    image: "/assets/projects/sales-system.jpg",
+    image: "src/assets/projects/angrybirds.jpg",
   },
   {
-    title: "Blog Personal con Astro.js",
+    title: "Este Blog Personal",
     description: "Un blog moderno usando componentes atómicos, Tailwind y Astro.",
-    github: "https://github.com/d3ny25/blog-astro",
+    github: "https://github.com/d3ny25/d3ny25.github.io",
     tech: [
-      { name: "Astro", icon: "/assets/icons/astro.svg" },
-      { name: "Tailwind", icon: "/assets/icons/tailwind.svg" },
-      { name: "TypeScript", icon: "/assets/icons/typescript.svg" },
+      { name: "Astro", icon: "src/assets/icons/astrojs.svg" },
+      { name: "Tailwind", icon: "src/assets/icons/tailwind.png" },
+      { name: "TypeScript", icon: "src/assets/icons/typescript.webp" },
     ],
-    image: "/assets/projects/blog.png",
+    image: "src/assets/projects/blogpersonal.jpg",
   },
 ];
 ---
 
 <section class="max-w-6xl mx-auto px-6 py-16">
-  <h2 class="text-4xl font-bold mb-10 text-center text-gray-800">Proyectos</h2>
+  <h2 class="text-4xl font-bold mb-10 text-center  text-indigo-300">Proyectos</h2>
 
   <div class="grid md:grid-cols-3 gap-8">
     {projects.map((project) => (

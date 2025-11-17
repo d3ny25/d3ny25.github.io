@@ -1,0 +1,35 @@
+
+---
+import SkillCard from "../atoms/SkillCard.astro";
+
+const cskills = [
+  {
+    name: "Guitarra y Música",
+    description:
+      "Composición musical y práctica instrumental.",
+    icon: "🎸",
+  },
+  {
+    name: "Edición de Video",
+    description:
+      "Edición dinámica para redes sociales y YouTube.",
+    icon: "✂️🎥",
+  },
+  {
+    name: "Grabación de contenido",
+    description:
+      "Captura de videos e imágenes.",
+    icon: "🎥",
+  },
+];
+
+---
+
+<section class="text-center py-16">
+    <div class="mb-20">
+        <h3 class="text-2xl font-semibold text-indigo-300 mb-8"> Habilidades Creativas </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {cskills.map((skill) => <SkillCard {...skill} />)}
+        </div>
+    </div>
+</section>

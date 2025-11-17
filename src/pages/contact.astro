@@ -1,0 +1,21 @@
+---
+import ContactForm from "../components/molecules/ContactForm.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+<Layout>
+<main class="flex flex-col items-center justify-center bg-linear-to-b from-gray-900 to-gray-800 border border-gray-700 rounded-2xl p-8 shadow-md hover:shadow-xl hover:shadow-indigo-500/20 transition-all duration-300 max-w-4xl mx-auto mt-10 text-gray-100">
+  <section class="w-full max-w-3xl">
+    <h1 class="text-4xl font-bold mb-10 text-center text-indigo-300">
+      Contacto
+    </h1>
+
+    <p class="text-gray-400 text-sm leading-relaxed">
+      Si deseas ponerte en contacto conmigo, llena el siguiente formulario.  
+      Estoy abierto a colaborar en proyectos, resolver dudas o simplemente charlar.
+    </p>
+
+    <ContactForm />
+  </section>
+</main>
+</Layout>

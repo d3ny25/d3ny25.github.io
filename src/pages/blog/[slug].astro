@@ -1,0 +1,65 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import "../../styles/blog.css";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props as {
+  post: CollectionEntry<"blog">;
+};
+
+const { Content } = await post.render();
+---
+<Layout>
+<head>
+  <meta charset="utf-8" />
+</head>
+
+<article class="max-w-3xl mx-auto px-6 py-24">
+  <header class="mb-12 text-center">
+    <h1 class="text-4xl font-extrabold text-indigo-400 mb-4">
+      {post.data.title}
+    </h1>
+
+    <p class="text-gray-500 text-sm">
+      {post.data.pubDate.toLocaleDateString("es-MX")}
+    </p>
+  </header>
+
+  {post.data.image && (
+    <img
+      src={post.data.image}
+      alt={post.data.title}
+      class="rounded-2xl mb-12 border border-gray-800 shadow-lg"
+    />
+  )}
+
+  <div class="blog-content">
+    <Content />
+  </div>
+
+
+
+  {post.data.tags && (
+    <div class="mt-12 flex flex-wrap gap-3">
+      {post.data.tags.map((tag) => (
+        <span
+          class="px-4 py-1 rounded-full bg-indigo-500/10
+                 text-indigo-300 text-sm border border-indigo-500/20"
+        >
+          #{tag}
+        </span>
+      ))}
+    </div>
+  )}
+</article>
+</Layout>

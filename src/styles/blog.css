@@ -1,0 +1,57 @@
+.blog-content {
+  max-width: 100%;
+}
+
+.blog-content h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgb(129 140 248);
+  margin-bottom: 1rem;
+}
+
+.blog-content h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: rgb(165 180 252);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.blog-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(199 210 254);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-content p {
+  color: rgb(209 213 219);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+
+.blog-content ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+  margin-bottom: 1.25rem;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-content hr {
+  margin: 3rem 0;
+  border-color: rgb(55 65 81);
+}
+
+.blog-content img {
+  border-radius: 1rem;
+  margin: 2.5rem 0;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.4);
+}
+
+.blog-content strong {
+  color: white;
+}
